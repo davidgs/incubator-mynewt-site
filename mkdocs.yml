@@ -7,6 +7,7 @@ pages:
 - Home: 'index.md'
 - Pages:
     - Bluetooth Low Energy 4.2: 'pages/ble.md'
+    - Mynewt OS Security: 'pages/securitybullets.md' 
 - Quick Start: 'quick-start.md'
 - About: 'about.md'
 - Talks: 'talks.md'
