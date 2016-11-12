@@ -39,7 +39,6 @@ pages:
             - 'Run Blinky from SRAM, no bootloader': 'os/tutorials/blinky_sram_olimex.md'
         - 'Work with repositories':
             - toc: 'os/tutorials/repo/add_repos.md'
-<<<<<<< cc2bbc0a37c0045ded6380c7d147f101168f1d1f
             - 'Upgrade a Repo': 'os/tutorials/repo/upgrade_repo.md'
             - 'Turn project into a Repo': 'os/tutorials/repo/create_repo.md'
         - 'Tasks and Priority Management': 'os/tutorials/tasks_lesson.md'
@@ -52,27 +51,14 @@ pages:
             - 'Slinky on STM32 board': 'os/tutorials/project-target-slinky.md'
         - 'Enable newtmgr in any app': 'os/tutorials/add_newtmgr.md' 
         - 'Enable the OS Shell and Console': 'os/tutorials/add_shell.md'
-=======
-            - 'Upgrade a repo': 'os/tutorials/repo/upgrade_repo.md'
-            - 'Turn project into a repo': 'os/tutorials/repo/create_repo.md'
-        - 'Write a Test Suite for a Package': 'os/tutorials/unit_test.md'
-        - 'Air-quality Sensor project': 'os/tutorials/air_quality_sensor.md'
-        - 'Add task to manage multiple events': 'os/tutorials/event_queue.md'
-        - 'Enable remote comms on sim device': 'os/tutorials/project-slinky.md'
-        - 'Enable remote comms on STM32 board': 'os/tutorials/project-target-slinky.md'
->>>>>>> Added STM32F4DISCOVERY to the list of supported boards
         - 'BLE app to check stats via console': 'os/tutorials/bletiny_project.md'
         - 'BLE peripheral project':
             - toc: 'os/tutorials/bleprph/bleprph-intro.md'
             - 'Service Registration': 'os/tutorials/bleprph/bleprph-svc-reg.md'
             - 'Characteristic Access': 'os/tutorials/bleprph/bleprph-chr-access.md'
             - 'Advertising': 'os/tutorials/bleprph/bleprph-adv.md'
-<<<<<<< cc2bbc0a37c0045ded6380c7d147f101168f1d1f
             - 'GAP Event Callbacks': 'os/tutorials/bleprph/bleprph-gap-event.md'
             - 'BLE Peripheral App' : 'os/tutorials/bleprph/bleprph-app.md'
-=======
-            - 'Connection Callbacks': 'os/tutorials/bleprph/bleprph-conn.md'
->>>>>>> Added STM32F4DISCOVERY to the list of supported boards
         - 'BLE iBeacon': 'os/tutorials/ibeacon.md'
         - 'BLE HCI interface': 'os/tutorials/blehci_project.md'
     - OS User Guide:
@@ -402,18 +388,22 @@ markdown_extensions:
         pygments_style: xcode
 
 extra:
-    version: 'v0_9_0'
+    version: 'develop'
     versions:
         -   label: 'develop'
             branch: 'develop'
+<<<<<<< a2bcf9ff0a3a956542df698d35d03f7b5e364d83
 <<<<<<< cc2bbc0a37c0045ded6380c7d147f101168f1d1f
             latest: True
 =======
             latest: False
 >>>>>>> Added STM32F4DISCOVERY to the list of supported boards
+=======
+            latest: True
+>>>>>>> configured develop version to show up as latest documentation
         -   label: '0.9.0'
             branch: 'v0_9_0'
-            latest: True
+            latest: False
     doc_path: 'os/introduction'
     chapters:
         Chapter 1 - Get Started: 'The chapter organization is outlined below. Each chapter will include one or more tutorials for hands-on experience with the material in each chapter.'
