@@ -18,6 +18,7 @@ Mynewt supports three image setups:
 | Unified   | Two standalone images.                    |
 | Split     | Kernel in slot 0; application in slot 1.  |
 
+
 Each setup has its tradeoffs.  The Single setup gives you the most flash space,
 but doesn't allow you to upgrade after manufacturing.  The Unified setup allows
 for a complete failover in case a bad image gets uploaded, but requires a lot
@@ -190,6 +191,7 @@ targets/split-nrf51dk
     build_profile=optimized
     loader=@apache-mynewt-core/apps/bleprph
     syscfg=BLE_LL_CFG_FEAT_LE_ENCRYPTION=0:BLE_SM_LEGACY=0
+
 ```
 
 Now, let's build the new target:
@@ -260,12 +262,14 @@ Loading loader image into slot 1
 
 ### Image Management
 
+
 #### Retrieve Current State (image list)
 
 Image management in the split setup is a bit more complicated than in the
 unified setup.  You can determine a device's image management state with the
 `newtmgr image list` command.  Here is how a device responds to this command
 after our loader + application combo has been deployed:
+
 
 ```
 [~/tmp/myproj2]$ newtmgr -c A600ANJ1 image list
@@ -335,6 +339,7 @@ Images:
 Split status: matching
 ```
 
+
 The `active confirmed` flags value on both slots indicates that both images are
 permanently running.
 
@@ -388,6 +393,7 @@ build your own loader application, and these can serve as samples.
 * @apache-mynewt-core/apps/slinky
 * @apache-mynewt-core/apps/bleprph
 
+
 ## Split Apps
 
 The following applications have been enabled as split applications. If you
@@ -398,6 +404,7 @@ that slinky can be either a loader image or an application image.
 * @apache-mynewt-core/apps/splitty
 
 ## Theory of Operation
+
 
 A split image is built as follows:
 

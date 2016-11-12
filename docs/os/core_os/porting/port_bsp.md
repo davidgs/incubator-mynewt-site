@@ -1,5 +1,5 @@
 
-#Create a BSP for your Target
+#Create a BSP for your Target 
 
 ###Introduction
 
@@ -86,7 +86,7 @@ Optionally, create these files as necessary to provide all functionality from My
 
 ###Fill Out your Package File
 
-Edit the package file to describe your BSP.
+Edit the package file to describe your BSP. 
 
 The package file must contain:
 
@@ -110,7 +110,7 @@ The package file typically contains:
     pkg.linkerscript.bootloader.OVERWRITE: "myboard_boot.ld"
     pkg.downloadscript: "myboard_download.sh"
     pkg.debugscript: "myboard_debug.sh"
-    pkg.deps:
+    pkg.deps: 
     - hw/mcu/mymcu/variant
 ```
 where `mymcu/variant` should be replaced with the specific MCU and variant used in your design.
@@ -175,7 +175,7 @@ Create an alternate linker script for the bootloader since it is typically linke
 
 ###Add Functions and Defines
 
-At this point, it will be possible to run the `newt` tool to build your target.
+At this point, it will be possible to run the `newt` tool to build your target. 
 
 You may run into complaints from the linker script that a few Mynewt specific functions are missing.  We will describe these below.
 
@@ -189,7 +189,11 @@ etc. that can be found in `libc_stubs.c`. But you _must_ implement the following
 
 | **Function** | **Description** |
 |-----------|-------------|
+<<<<<<< HEAD
 | `_sbrk` | Returns memory from heap (used by malloc) |
+=======
+| _sbrk | Returns memory from heap (used by malloc) | 
+>>>>>>> Added STM32F4DISCOVERY to the list of supported boards
 
 * Implement `_sbrk()`
 
@@ -260,5 +264,5 @@ The `LICENSE` file is an ASCII text file that describes the source license for t
 package.
 
 The `README.md` is a [markdown](https://en.wikipedia.org/wiki/Markdown)
- file that contains any documentation you
+ file that contains any documentation you 
 want to provide for the BSP.
