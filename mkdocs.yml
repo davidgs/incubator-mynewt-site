@@ -395,7 +395,7 @@ extra:
             latest: True
         -   label: '0.9.0'
             branch: 'v0_9_0'
-            latest: True
+            latest: False
     doc_path: 'os/introduction'
     chapters:
         Chapter 1 - Get Started: 'The chapter organization is outlined below. Each chapter will include one or more tutorials for hands-on experience with the material in each chapter.'
@@ -415,6 +415,7 @@ extra:
             description: 'Contact runtime.io or email us at dev@mynewt.incubator.apache.org to check out and discuss Apache Mynewt and its many uses.'
             location: "Las Vegas, NV"
             date: '5-8 January, 2017'
+
 
 copyright: 'Copyright &copy; 2015 The Apache Software Foundation, Licensed under the Apache License, Version 2.0 Apache and the Apache feather logo are trademarks of The Apache Software Foundation.<br>The Apache Software Foundation Apache Incubator'
 
