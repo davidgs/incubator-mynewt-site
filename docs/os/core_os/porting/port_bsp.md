@@ -171,11 +171,7 @@ There are also several libc definitions that can be stubbed in your first BSP. E
 
 | **Function** | **Description** |
 |-----------|-------------|
-<<<<<<< HEAD
 | `_sbrk` | Returns memory from heap (used by malloc) |
-=======
-| _sbrk | Returns memory from heap (used by malloc) | 
->>>>>>> Added STM32F4DISCOVERY to the list of supported boards
 
 * Implement `_sbrk()`
 
