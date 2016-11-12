@@ -388,22 +388,14 @@ markdown_extensions:
         pygments_style: xcode
 
 extra:
-    version: 'develop'
+    version: 'v0_9_0'
     versions:
         -   label: 'develop'
             branch: 'develop'
-<<<<<<< a2bcf9ff0a3a956542df698d35d03f7b5e364d83
-<<<<<<< cc2bbc0a37c0045ded6380c7d147f101168f1d1f
             latest: True
-=======
-            latest: False
->>>>>>> Added STM32F4DISCOVERY to the list of supported boards
-=======
-            latest: True
->>>>>>> configured develop version to show up as latest documentation
         -   label: '0.9.0'
             branch: 'v0_9_0'
-            latest: False
+            latest: True
     doc_path: 'os/introduction'
     chapters:
         Chapter 1 - Get Started: 'The chapter organization is outlined below. Each chapter will include one or more tutorials for hands-on experience with the material in each chapter.'
