@@ -101,7 +101,6 @@ Once _newt install_ has successfully finished, the contents of _apache-mynewt-co
 
 ```no-highlight
 $ tree -L 2 repos/apache-mynewt-core/
-<<<<<<< HEAD
 repos/apache-mynewt-core/
 repos/apache-mynewt-core/
 ├── CODING_STANDARDS.md
@@ -156,7 +155,6 @@ repos/apache-mynewt-core/
 │   └── nffs
 ├── hw
 │   ├── bsp
-<<<<<<< HEAD
 │   ├── cmsis-core
 │   ├── drivers
 │   ├── hal

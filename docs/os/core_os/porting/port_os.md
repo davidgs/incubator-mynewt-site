@@ -54,7 +54,6 @@ the UART pins should appear to match the hardware layout of your system.
 * If your BSP is already supported my Mynewt, there is no additional BSP work involved in porting to your platform.  You need only to set the `bsp` attribute in your Mynewt target using the [newt command tool](../../../../newt/newt_intro). 
 * If your BSP is not yet supported by Mynewt, you can add support following the instructions on [how to add BSP support to Mynewt](port_bsp.md)
 
-
 ###MCU Dependency
 
 Some OS code depends on the MCU or SoC that the system contains. For example, the MCU may specify the potential memory map of the system - where code and data can reside.
@@ -67,6 +66,12 @@ instructions on [how to add MCU support to Mynewt](port_mcu.md)
 
 ### MCU HAL
 
+<<<<<<< HEAD
+=======
+
+### MCU HAL
+
+>>>>>>> This closes #118.
 Mynewt's architecture supports a hardware abstraction layer (HAL) for common on or off-chip MCU peripherals such as GPIO, UARTs, flash memory etc.  Even if your MCU is supported for the core OS, you may find that you need to implement the HAL functionality for a new peripheral.   For a description of the HAL abstraction and implementation information,
 see the [HAL API](../../modules/hal/hal.md)
 

@@ -299,7 +299,6 @@ developing locally, you can provide 0.0.0 for every image version.
 If you want the image to run without the debugger connected, simply quit the 
 debugger and restart the board.  The image you programmed will come and run on the Arduino on next boot!  
 
-
 <br>
 
 ### Watch the LED blink

@@ -13,11 +13,8 @@ Retrieves a packet off an mqueue. Returns a pointer to the mbuf at the head of t
 
 | Arguments | Description |
 |-----------|-------------|
-<<<<<<< HEAD
 | `mq` | The mqueue to retrieve an mbuf from. |
-=======
-| mq | Pointer to Mqueue structure  |
->>>>>>> This closes #118.
+
 
 <br>
 
