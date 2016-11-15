@@ -78,20 +78,6 @@ targets.
 **NOTE:** The actual code and package files are not installed 
 (except the template for `main.c`).  See the next step for installing the packages.
 
-**NOTE:** By default newt uses the code in the master branch. This is the latest stable
-code for newt. If you need to use a different branch, you can set this in the project.yml
-file. 
-
-```no-highlight
-repository.apache-mynewt-core:
-    type: github
-    vers: 0-latest
-    user: apache
-    repo: incubator-mynewt-core
-```
-Changing to 0-dev will put you on the develop branch. **The Develop Branch may not be stable and 
-you may encounter bugs or other problems.**
-
 <br>
 
 ### Newt Install
@@ -115,6 +101,7 @@ Once _newt install_ has successfully finished, the contents of _apache-mynewt-co
 
 ```no-highlight
 $ tree -L 2 repos/apache-mynewt-core/
+<<<<<<< 5b55475372c923a82d3cc322d400099bfb7de539
 repos/apache-mynewt-core/
 repos/apache-mynewt-core/
 ├── CODING_STANDARDS.md
@@ -159,12 +146,17 @@ repos/apache-mynewt-core/
 │   ├── cborattr
 │   ├── json
 │   └── tinycbor
+=======
+.
+<snip>
+>>>>>>> This closes #118.
 ├── fs
 │   ├── fcb
 │   ├── fs
 │   └── nffs
 ├── hw
 │   ├── bsp
+<<<<<<< 5b55475372c923a82d3cc322d400099bfb7de539
 │   ├── cmsis-core
 │   ├── drivers
 │   ├── hal
@@ -215,6 +207,29 @@ repos/apache-mynewt-core/
     └── mem
 
 87 directories, 9 files
+=======
+│   ├── hal
+│   └── mcu
+├── libs
+│   ├── baselibc
+│   ├── bootutil
+│   ├── cmsis-core
+│   ├── console
+│   ├── elua
+│   ├── flash_test
+│   ├── imgmgr
+│   ├── json
+│   ├── mbedtls
+│   ├── newtmgr
+│   ├── os
+│   ├── shell
+│   ├── testreport
+│   ├── testutil
+│   └── util
+├── net
+│   └── nimble
+<snip>
+>>>>>>> This closes #118.
 ```
 
 As you can see, the core of the Apache Mynewt operating system has been brought 
@@ -243,6 +258,7 @@ $ brew uninstall gcc-6
 $ brew link gcc-5
 ```
 
+
 <br>
 
 To test all the packages in a project, specify `all` instead of the package name.
@@ -251,11 +267,10 @@ To test all the packages in a project, specify `all` instead of the package name
 $ newt test all
 ...lots of compiling and testing...
 ...about 2 minutes later ...
-Compiling mn_sock_test.c
-Archiving mn_socket.a
-Linking test_mn_socket
-Executing test: /Users/dsimmons/myproj/bin/unittest/sys/mn_socket/test_mn_socket
-Passed tests: [libs/json libs/util libs/mbedtls net/nimble/host hw/hal libs/bootutil sys/log sys/config sys/fcb fs/nffs libs/os libs/boot_serial sys/mn_socket]
+Archiving bootutil.a
+Linking test_bootutil
+Executing test: /myproj/bin/unittest/libs/bootutil/test_bootutil
+Passed tests: [net/nimble/host fs/nffs libs/os hw/hal libs/mbedtls libs/util sys/config libs/bootutil]
 All tests passed
 ```
 
@@ -267,17 +282,21 @@ To build and run your new application, simply issue the following command:
 
 ```
 $ newt build my_blinky_sim 
-Building target targets/my_blinky_sim
+Compiling base64.c
+Compiling cbmem.c
+Compiling datetime.c
+Compiling tpq.c
+Archiving util.a
 Compiling main.c
 Archiving blinky.a
-Compiling hal_bsp.c
-Compiling os_bsp.c
-Compiling sbrk.c
-Archiving native.a
 Compiling flash_map.c
+Compiling hal_flash.c
+Archiving hal.a
+Compiling cons_fmt.c
+Compiling cons_tty.c
 <snip>
 Linking blinky.elf
-App successfully built: /Users/dsimmons/myproj/bin/my_blinky_sim/apps/blinky/blinky.elf
+App successfully built: /Users/sterling/dev/tmp/my_app/bin/my_blinky_sim/apps/blinky/blinky.elf
 ```
 
 <br>
@@ -288,9 +307,15 @@ You can run the simulated version of your project and see the simulated LED
 blink.
 
 ```
-$ ./bin/my_blinky_sim/apps/blinky/blinky.elf
-hal_gpio set pin  1 to 0
+$ newt run my_blinky_sim
+No download script for BSP hw/bsp/native
+Debugging /workspace/bin/my_blinky_sim/apps/blinky/blinky.elf
+<snip>
+Reading symbols from /workspace/bin/my_blinky_sim/apps/blinky/blinky.elf...done.
+(gdb)
 ```
+
+Type `r` at the `(gdb)` prompt to run the project. You will see an output indicating that the `hal_gpio` pin is toggling between 1 and 0 in a simulated blink. 
 
 <br>
 

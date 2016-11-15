@@ -16,11 +16,12 @@ waiting for work to do. Other tasks (or interrupts) then call `os_eventq_put()`
 to wake it up. Once an event has been queued, the task waiting on that queue is woken up. The event dispatching logic is built into each event via a callback function pointer. The task handler can simply pull events
 off the queue and call its callback handler. The processing task would then act according to the event type. 
 
-When `os_event` is queued, it should not be freed until processing task is done with it.
 
-It is assumed that there is only one task consuming events from an event queue. Only one task should be sleeping on a particular `os_eventq` at a time.
+When *os_event* is queued, it should not be freed until processing task is done with it.
 
-Note that [os_callout](../callout/callout.md) subsystem assumes that event queue is used as the wakeup mechanism.
+It is assumed that there is only one task consuming events from an event queue. Only one task should be sleeping on a particular *os_eventq* at a time.
+
+Note that os_callout subsystem assumes that event queue is used as the wakeup mechanism.
 
 ### Data structures
 
