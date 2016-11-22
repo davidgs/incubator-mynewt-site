@@ -154,20 +154,12 @@ os_task_init(&mytask, "mytask", mytask_handler, NULL,
 ```
 
 ##Task Priority, Preempting, and Context Switching
-<<<<<<< 04d6c2b0298fa270e9f1aa388bc87f8d0d8e9afc
 
 A preemptive RTOS is one in which a higher priority task that is *ready to run* will preempt (i.e. take the 
 place of) the lower priority task which is *running*. When a lower priority task is preempted by a higher 
 priority task, the lower priority task’s context data (stack pointer, registers, etc.) is saved and the new 
 task is switched in.
 
-=======
-A preemptive RTOS is one in which a higher priority task that is *ready to run* will preempt (i.e. take the 
-place of) the lower priority task which is *running*. When a lower priority task is preempted by a higher 
-priority task, the lower priority task’s context data (stack pointer, registers, etc.) is saved and the new 
-task is switched in.
-
->>>>>>> Updated events in mkdocs.yml. This closes #126.
 In our example, `work_task` has a higher priority than `blinky_task` and, because it is never put into a 
 *sleep* state, holds the processor focus on its context. Let’s give `work_task` a delay and some simulated 
 work to keep it busy. Because the delay is measured in os ticks, the actual number of ticks per second is 
