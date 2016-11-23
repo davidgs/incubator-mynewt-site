@@ -127,8 +127,6 @@ If there's no Mynewt app running, or the Mynewt app doesn't have the Shell and C
 enabled, you won't see anything there, but you can always refer back to this page
 from later tutorials if you need to.
 
-
-
 Now that you know how to communicate with your mynewt application, let's move on to
 creating one!
 
