@@ -151,7 +151,6 @@ os_task_init(&mytask, "mytask", mytask_handler, NULL,
 ```
 
 ##Task Priority, Preempting, and Context Switching
-
 A preemptive RTOS is one in which a higher priority task that is *ready to run* will preempt (i.e. take the 
 place of) the lower priority task which is *running*. When a lower priority task is preempted by a higher 
 priority task, the lower priority task’s context data (stack pointer, registers, etc.) is saved and the new 
