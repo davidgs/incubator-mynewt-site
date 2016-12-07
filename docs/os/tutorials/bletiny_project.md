@@ -152,6 +152,7 @@ You will now look for some BLE related stats over a serial connection and see th
 You may use any terminal emulation program to communicate with the board. This tutorial shows a Minicom set up. You will have to find out what the usbserial port number is on your laptop, of course.
 
 
+
 ```
 $ minicom -D /dev/tty.usbserial-AJ03HAQQ
 ```

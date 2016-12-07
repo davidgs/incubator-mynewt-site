@@ -58,11 +58,8 @@ the UART pins should appear to match the hardware layout of your system.
 
 Some OS code depends on the MCU or SoC that the system contains. For example, the MCU may specify the potential memory map of the system - where code and data can reside.
 
-* If your MCU is already supported by Mynewt, there is no additional MCU work involved in 
-porting to your platform.  You need only set the `arch` attribute in your Mynewt target 
-using the [newt command tool](../../../newt/newt_intro).
-* If your MCU is not yet supported by Mynewt, you can add support by following the 
-instructions on [how to add MCU support to Mynewt](port_mcu.md)
+* If your MCU is already supported my Mynewt, there is no additional MCU work involved in porting to your platform.  You need only to set the `arch` attribute in your Mynewt target using the [newt command tool](../../../../newt/newt_intro). 
+* If your MCU is not yet supported by Mynewt, you can add support following the instructions on[how to add MCU support to Mynewt](port_mcu.md)
 
 
 

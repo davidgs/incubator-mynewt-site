@@ -24,16 +24,17 @@ Select a name for your BSP.  For the remainder of this document, we'll assume th
 
 Create a directory `hw/bsp/myboard` using the name chosen above. Within this BSP directory, create the following subdirectories:
 
+Select a name for your BSP.  For the remainder of this document, 
+well assume the bsp is named `myboard`. In general its best to select a 
+name that describes the board/system you are creating.
+
 * `include`
 * `include/bsp`
 * `src`
 
 ###Create a Target using Mynewt
 
-Create a newt target for your test project for the BSP. To learn how to create a target, 
-see this **howto** [Tutorial](../../get_started/project_create). Once you are familiar 
-with creating targets, move on below to create a target to use to test your BSP.
-
+Create a newt target for your test project for the BSP. To learn how to create a target, see this **howto** [Tutorial](../../get_started/project1). Once you are familiar with creating targets, move on below to create a target to use to test your BSP.
 
 It is recommended that you use a simple `project` like `blinky` to minimize time to get a working Mynewt system.  For this document, we will assume the `target` is called `myboard_blinky` and uses project `blinky`.  
 
@@ -42,7 +43,7 @@ Set the `bsp` of the project to `/hw/bsp/myboard`. While creating your target, y
 When you are complete, your `target` may look similar to this.
 
 ```c
-    $ newt target show
+    $newt target show 
         myboard_blinky
             arch=cortex_m0
             bsp=hw/bsp/myboard
@@ -172,11 +173,15 @@ There are also several libc definitions that can be stubbed in your first BSP. E
 
 | **Function** | **Description** |
 |-----------|-------------|
+<<<<<<< HEAD
 <<<<<<< cc2bbc0a37c0045ded6380c7d147f101168f1d1f
 | `_sbrk` | Returns memory from heap (used by malloc) |
 =======
 | _sbrk | Returns memory from heap (used by malloc) | 
 >>>>>>> Added STM32F4DISCOVERY to the list of supported boards
+=======
+| _sbrk | Returns memory from heap (used by malloc) | 
+>>>>>>> da2c574cbd0b9b304152bb9dbceb2633d7e57d7b
 
 * Implement `_sbrk()`
 

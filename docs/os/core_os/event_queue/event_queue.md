@@ -5,7 +5,7 @@ Event queue is a way for a task to serialize events sent to it. This makes it ea
 
 ### Description
 
-Events arrive in form the of a data structure `struct os_event` and 
+Events arrive in the form of a data structure `struct os_event` and 
 they are queued to another data structure `struct os_eventq`.
 
 The Event Queue must be initialized before trying to add events to 
@@ -20,6 +20,11 @@ off the queue and call its callback handler. The processing task would then act 
 When *os_event* is queued, it should not be freed until processing task is done with it.
 
 It is assumed that there is only one task consuming events from an event queue. Only one task should be sleeping on a particular *os_eventq* at a time.
+
+Mynewt has moved the event dispatching logic out of the task handler and instead the
+logic is built in to each event via a callback function pointer. The task handler no longer
+needs to dispatch events based on their types but instead can simply pull events
+off the queue and call it's callback handler. 
 
 Note that os_callout subsystem assumes that event queue is used as the wakeup mechanism.
 

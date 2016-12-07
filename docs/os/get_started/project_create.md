@@ -101,7 +101,6 @@ Once _newt install_ has successfully finished, the contents of _apache-mynewt-co
 
 ```no-highlight
 $ tree -L 2 repos/apache-mynewt-core/
-<<<<<<< 5b55475372c923a82d3cc322d400099bfb7de539
 repos/apache-mynewt-core/
 repos/apache-mynewt-core/
 ├── CODING_STANDARDS.md
@@ -146,17 +145,14 @@ repos/apache-mynewt-core/
 │   ├── cborattr
 │   ├── json
 │   └── tinycbor
-=======
 .
 <snip>
->>>>>>> This closes #118.
 ├── fs
 │   ├── fcb
 │   ├── fs
 │   └── nffs
 ├── hw
 │   ├── bsp
-<<<<<<< 5b55475372c923a82d3cc322d400099bfb7de539
 │   ├── cmsis-core
 │   ├── drivers
 │   ├── hal
@@ -207,29 +203,6 @@ repos/apache-mynewt-core/
     └── mem
 
 87 directories, 9 files
-=======
-│   ├── hal
-│   └── mcu
-├── libs
-│   ├── baselibc
-│   ├── bootutil
-│   ├── cmsis-core
-│   ├── console
-│   ├── elua
-│   ├── flash_test
-│   ├── imgmgr
-│   ├── json
-│   ├── mbedtls
-│   ├── newtmgr
-│   ├── os
-│   ├── shell
-│   ├── testreport
-│   ├── testutil
-│   └── util
-├── net
-│   └── nimble
-<snip>
->>>>>>> This closes #118.
 ```
 
 As you can see, the core of the Apache Mynewt operating system has been brought 

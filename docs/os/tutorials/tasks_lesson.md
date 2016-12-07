@@ -151,6 +151,7 @@ os_task_init(&mytask, "mytask", mytask_handler, NULL,
 ```
 
 ##Task Priority, Preempting, and Context Switching
+
 A preemptive RTOS is one in which a higher priority task that is *ready to run* will preempt (i.e. take the 
 place of) the lower priority task which is *running*. When a lower priority task is preempted by a higher 
 priority task, the lower priority task’s context data (stack pointer, registers, etc.) is saved and the new 
@@ -237,9 +238,9 @@ Set a new app location.
 $ newt target set task_tgt app=apps/mynewt_tasks_lesson
 ```
 
-Now let’s take a look at our new code. First, notice that we have abandoned blinking, instead choosing t
-o use the [*console*](http://mynewt.apache.org/latest/os/modules/console/console/) and [*shell*](http://mynewt.apache.org/latest/os/modules/shell/shell/) 
-to follow our tasks through execution.
+Now let’s take a look at our new code. First, notice that we have abandoned blinking, instead 
+choosing to use the [*console*](http://mynewt.apache.org/latest/os/modules/console/console/) 
+and [*shell*](http://mynewt.apache.org/latest/os/modules/shell/shell/) to follow our tasks through execution.
 
 Additionally, we have a number of different tasks:
 
@@ -276,6 +277,9 @@ moved to master).
 $ cd repos/mynewt_arduino_zero
 $ git checkout develop
 ```
+
+You should already be familiar with the [Serial Port Setup and Configuration](../get_started/serial_access.md), but if
+you're not, you can go there now and then come back. 
 
 Open a new terminal window and list your serial connections to find our Arduino.
 ```c
@@ -399,6 +403,7 @@ rate, Task B would take over a minute to finish one cycle.
 Feel free to play around with the testing parameters to study the different changes yourself!
 
 ##Conclusion
+
 Moving forward, tasks are just the tip of the iceberg. The [*scheduler*](http://mynewt.apache.org/latest/os/core_os/context_switch/context_switch/), 
 [*event queues*](http://mynewt.apache.org/latest/os/core_os/event_queue/event_queue/), 
 [*semaphores*](http://mynewt.apache.org/latest/os/core_os/semaphore/semaphore/), and 
@@ -413,3 +418,4 @@ application. You should assign priorities based on execution time, urgency, and 
 other things.
 
 Keep blinking and happy hacking!
+

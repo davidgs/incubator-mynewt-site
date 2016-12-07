@@ -39,8 +39,12 @@ repo.versions:
 It contains the following:
 
 * **repo.name** The external name that is used to include the library in 
+<<<<<<< HEAD
 your `project.yml` file.   This is the name you include in the `project.repositories` 
 variable when adding this repository to your project.
+=======
+your `project.yml` file.   This is the name you in include in the `project.repositories` variable when adding this repository to your project.
+>>>>>>> da2c574cbd0b9b304152bb9dbceb2633d7e57d7b
 * **repo.versions** A description of what versions to give the user depending 
 on the settings in their `project.yml` file.  See below for a thorough description
 on versioning. Its a flexible mapping between version numbers and git branches.

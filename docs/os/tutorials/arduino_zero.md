@@ -99,13 +99,6 @@ $ newt target create arduino_boot
 $ newt target set arduino_boot bsp=@mynewt_arduino_zero/hw/bsp/arduino_zero 
 $ newt target set arduino_boot app=@apache-mynewt-core/apps/boot 
 $ newt target set arduino_boot build_profile=optimized
-<<<<<<< 5b55475372c923a82d3cc322d400099bfb7de539
-Target targets/arduino_boot successfully set target.build_profile to optimized
-$ newt target set arduino_boot syscfg=BSP_ARDUINO_ZERO_PRO=1
-Target targets/arduino_boot successfully set target.syscfg to BSP_ARDUINO_ZERO_PRO=1
-
-=======
->>>>>>> This closes #118.
 ```
 
 <br>
