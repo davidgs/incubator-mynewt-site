@@ -292,6 +292,21 @@ $ minicom -D /dev/tty.usbmodem14132 -b 115200
 
 If you see minicom welcome you, you’re ready to move on!
 
+Open a new terminal window and list your serial connections to find our Arduino.
+```c
+$ ls /dev/tty.*
+
+/dev/tty.Bluetooth-Incoming-Port /dev/tty.usbmodem14132
+```
+
+In the same window, connect to the serial port using a serial communication program. 
+In this case I’ll be using mincom as it can scroll through output.
+```c
+$ minicom -D /dev/tty.usbmodem14132 -b 115200
+```
+
+If you see minicom welcome you, you’re ready to move on!
+
 ### Output Analysis
 
 Run our new target, task_tgt, and you should see an output similar to this:
@@ -399,6 +414,7 @@ rate, Task B would take over a minute to finish one cycle.
 Feel free to play around with the testing parameters to study the different changes yourself!
 
 ##Conclusion
+
 Moving forward, tasks are just the tip of the iceberg. The [*scheduler*](http://mynewt.apache.org/latest/os/core_os/context_switch/context_switch/), 
 [*event queues*](http://mynewt.apache.org/latest/os/core_os/event_queue/event_queue/), 
 [*semaphores*](http://mynewt.apache.org/latest/os/core_os/semaphore/semaphore/), and 
@@ -413,3 +429,4 @@ application. You should assign priorities based on execution time, urgency, and 
 other things.
 
 Keep blinking and happy hacking!
+

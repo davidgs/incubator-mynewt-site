@@ -145,10 +145,8 @@ repos/apache-mynewt-core/
 │   ├── cborattr
 │   ├── json
 │   └── tinycbor
-=======
 .
 <snip>
->>>>>>> This closes #118.
 ├── fs
 │   ├── fcb
 │   ├── fs

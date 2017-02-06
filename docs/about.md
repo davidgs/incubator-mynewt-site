@@ -9,7 +9,6 @@ Some upcoming features:
 * Support for additional boards
 
 
-
 <font color="#F2853F"> The detailed roadmap is tracked on [JIRA for Mynewt](https://issues.apache.org/jira/browse/MYNEWT/?selectedTab=com.atlassian.jira.jira-projects-plugin:roadmap-panel). </font>
 
 <br>

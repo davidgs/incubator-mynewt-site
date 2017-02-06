@@ -7,6 +7,7 @@
 
 Sets `struct os_eventq` as the default event queue
 
+
 #### Arguments
 
 | Arguments | Description |

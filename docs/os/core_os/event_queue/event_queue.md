@@ -5,7 +5,7 @@ Event queue is a way for a task to serialize events sent to it. This makes it ea
 
 ### Description
 
-Events arrive in form the of a data structure `struct os_event` and 
+Events arrive in the form of a data structure `struct os_event` and 
 they are queued to another data structure `struct os_eventq`.
 
 The Event Queue must be initialized before trying to add events to 

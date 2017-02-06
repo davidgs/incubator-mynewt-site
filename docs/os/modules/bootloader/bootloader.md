@@ -1,6 +1,5 @@
 #Bootloader
 
-<<<<<<< HEAD
 The "bootloader" is the code that loads the Mynewt OS image into memory and conducts some checks before allowing the OS to be run. It manages images for the embedded system and upgrades of those images using protocols over various interfaces (e.g. serial, BLE etc.). Typically, systems with bootloaders have at least two program images coexisting on the same microcontroller, and hence must include branch code that performs a check to see if an attempt to update software is already underway and manage the progress of the process.
 
 The bootloader in the Apache Mynewt project verifies the cryptographic signature of the firmware image before running it. It maintains a detailed status log for each stage of the boot process. For verification of the authenticity of the OS image, it:
@@ -565,7 +564,6 @@ Replace this with the list of data structures used, why, any neat features
 
 
 The functions available in bootloader are:
->>>>>>> This closes #118.
 
 * [boot_build_status](boot_build_status.md)
 * [boot_build_status_one](boot_build_status_one.md)

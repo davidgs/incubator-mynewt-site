@@ -59,7 +59,15 @@ pages:
         - 'BLE iBeacon': 'os/tutorials/ibeacon.md'
         - 'BLE HCI interface': 'os/tutorials/blehci_project.md'
         - 'Adding Peripheral Sensors':
+<<<<<<< HEAD
             - 'Liquid Sensor via ADC': 'os/tutorials/nrf52_adc.md'
+=======
+<<<<<<< HEAD
+            - 'Liquid Sensor via ADC': 'os/tutorials/nrf52_adc.md'
+=======
+                   - 'Liquid Sensor via ADC': 'os/tutorials/nrf52_adc.md'
+>>>>>>> 1edcd7bf36ca194dd1fce08d1054275e54bbf6b6
+>>>>>>> 3a5024ca277e65f643d8084fc33ba0ef48d73a24
     - OS User Guide:
         - toc: 'os/os_user_guide.md'
         - OS Core:

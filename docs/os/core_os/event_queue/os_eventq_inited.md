@@ -7,6 +7,7 @@
 
 Check if event queue `const struct os_eventq` is ready for use.
 
+
 #### Arguments
 
 | Arguments | Description |

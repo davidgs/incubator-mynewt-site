@@ -13,10 +13,16 @@ Adds a packet (i.e. packet header mbuf) to an mqueue. The event associated with 
 
 | Arguments | Description |
 |-----------|-------------|
+<<<<<<< HEAD
 | `mq`      | The mbuf queue to append the mbuf to. |
 | `evq`     | The event queue to post an event to. |
 | `m`       | The mbuf to append to the mbuf queue. |
 
+=======
+| mq |  Pointer to mqueue  |
+| evq | Pointer to event queue where mqueue event should get posted |
+| m | Pointer to packet header mbuf |
+>>>>>>> 3a5024ca277e65f643d8084fc33ba0ef48d73a24
 
 <br>
 
